@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turgut Can Taskaya - Portfolio</title>
+    <style>
+        /* Colorful Template - Vibrant, playful design with animations */
+
+/* Reset scoped to portfolio */
+.portfolio-colorful,
+.portfolio-colorful *,
+.portfolio-colorful *::before,
+.portfolio-colorful *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+.portfolio-colorful {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: #2d3748;
+    background: #fefefe;
+    min-height: 100vh;
+}
+
+/* Container */
+.portfolio-colorful .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header with animated gradient */
+.portfolio-colorful .header {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.portfolio-colorful .header-content {
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.portfolio-colorful .header .name {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 0.8s ease;
+}
+
+.portfolio-colorful .header .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.95);
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating shapes */
+.portfolio-colorful .header-shapes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.portfolio-colorful .shape {
+    position: absolute;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+}
+
+.portfolio-colorful .shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.portfolio-colorful .shape-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 15%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.portfolio-colorful .shape-3 {
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    left: 20%;
+    animation: float 7s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* About Section */
+.portfolio-colorful .about-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.portfolio-colorful .about-card {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(252, 182, 159, 0.3);
+}
+
+.portfolio-colorful .about-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.portfolio-colorful .about-card .bio {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+/* Section title */
+.portfolio-colorful .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2d3748;
+}
+
+/* Skills Section */
+.portfolio-colorful .skills-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #fff 0%, #f7fafc 100%);
+}
+
+.portfolio-colorful .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.portfolio-colorful .skill-tag {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Colorful skill tags */
+.portfolio-colorful .skill-tag:nth-child(6n+1) { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.portfolio-colorful .skill-tag:nth-child(6n+2) { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.portfolio-colorful .skill-tag:nth-child(6n+3) { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.portfolio-colorful .skill-tag:nth-child(6n+4) { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.portfolio-colorful .skill-tag:nth-child(6n+5) { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.portfolio-colorful .skill-tag:nth-child(6n+6) { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+
+.portfolio-colorful .skill-tag:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Projects Section */
+.portfolio-colorful .projects-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.portfolio-colorful .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-colorful .project-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.portfolio-colorful .project-card:nth-child(3n+1) { border-top: 4px solid #667eea; }
+.portfolio-colorful .project-card:nth-child(3n+2) { border-top: 4px solid #f5576c; }
+.portfolio-colorful .project-card:nth-child(3n+3) { border-top: 4px solid #43e97b; }
+
+.portfolio-colorful .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.portfolio-colorful .project-card-content {
+    padding: 2rem;
+}
+
+.portfolio-colorful .project-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-colorful .project-description {
+    color: #718096;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.portfolio-colorful .project-tech {
+    font-size: 0.9rem;
+    color: #a0aec0;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.portfolio-colorful .project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.portfolio-colorful .project-link {
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.portfolio-colorful .project-link:first-child {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.portfolio-colorful .project-link:last-child {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}
+
+.portfolio-colorful .project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Contact Section */
+.portfolio-colorful .contact-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    color: white;
+}
+
+.portfolio-colorful .contact-section .section-title {
+    color: white;
+}
+
+.portfolio-colorful .contact-email {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.portfolio-colorful .social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-colorful .social-link {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.portfolio-colorful .social-link:hover {
+    background: white;
+    color: #764ba2;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.portfolio-colorful .footer {
+    background: #2d3748;
+    text-align: center;
+    padding: 2rem;
+    color: #a0aec0;
+}
+
+.portfolio-colorful .footer p:first-child {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-colorful .header .name {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio-colorful .header .title {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio-colorful .section-title {
+        font-size: 2rem;
+    }
+    
+    .portfolio-colorful .about-card {
+        padding: 2rem;
+    }
+    
+    .portfolio-colorful .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-colorful .shape-1,
+    .portfolio-colorful .shape-2,
+    .portfolio-colorful .shape-3 {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <div class="portfolio-colorful">
+        <!-- Header with animated gradient -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="name">Turgut Can Taskaya</h1>
+                <p class="title">Frontend Developer</p>
+            </div>
+            <div class="header-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-card">
+                    <h2>👋 About Me</h2>
+                    <p class="bio">Aspiring Front-End Developer with hands-on experience in HTML, CSS, JavaScript, Tailwind, Bootstrap, and React. Currently working in a tech-driven environment, contributing to real projects and continuously improving through practice and documentation. Focused on building clean, responsive, and user-friendly web interfaces while strengthening core front-end fundamentals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section-title">🚀 Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">CSS3</span><span class="skill-tag">Linux</span><span class="skill-tag">Responsive Web Design</span><span class="skill-tag">JavaScript Frameworks</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <div class="container">
+                <h2 class="section-title">💼 Projects</h2>
+                <div class="projects-container">
+                    
+            <div class="project-card">
+                <div class="project-card-content">
+                    <h4 class="project-name">quickfolio.dev</h4>
+                    <p class="project-description">Quickfolio is a lightweight tool that helps users create clean, responsive portfolio websites quickly using ready-made templates and a simple form.</p>
+                    <p class="project-tech">🛠️ Html Js Css</p>
+                    <div class="project-links">
+                        <a href="https://quick-folio-dev.netlify.app" class="project-link" target="_blank">🔗 Live Demo</a>
+                        <a href="https://github.com/Turcute/quickfolio.dev" class="project-link" target="_blank">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">📬 Let's Connect!</h2>
+                <p class="contact-email">taskayacanturgut@gmail.com</p>
+                <div class="social-links">
+                    <a href="https://github.com/Turcute" class="social-link" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/turgutcan-taskaya/" class="social-link" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with 💜 using QuickFolio</p>
+            <p>&copy; 2025 Turgut Can Taskaya</p>
+        </footer>
+    </div>
+
+</body>
+</html>
